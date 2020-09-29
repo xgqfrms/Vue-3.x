@@ -14,6 +14,6 @@ export default {
 </script>
 <style scoped>
   .ChildB1{
-    color: rgba(0, 1, 0, 0.5);
+    color: rgba(0, 255, 0, 0.5);
   }
 </style>
