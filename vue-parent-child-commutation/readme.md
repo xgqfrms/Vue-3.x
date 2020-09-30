@@ -15,13 +15,53 @@ https://stackblitz.com/edit/vue-parent-child-commutation?file=src%2FApp.vue
 ## 5. global object
 
 
-## dev
+## vue 3.x
+
+https://v3.vuejs.org/guide/introduction.html
+
+https://v3.vuejs.org/guide/installation.html
+
+```sh
+# latest stable
+$ npm install vue@next
+
+```
+
+```sh
+$ yarn global add @vue/cli
+# OR
+$ npm i -g @vue/cli
+
+# Vue CLI v4.5+
+$ vue --version
+# @vue/cli 4.5.6
+
+# cd project, run
+$ vue upgrade --next
+
+```
+
+
+```sh
+$ yarn create vite-app <project-name>
+$ cd <project-name>
+$ yarn
+$ yarn dev
+
+# OR
+$ npm init vite-app <project-name>
+$ cd <project-name>
+$ npm install
+$ npm run dev
+
+```
 
 ```sh
 $ yarn
 
 $ yarn start
-$ yarn serve
+# bug ???
+$ yarn serve 
 
 ```
 
