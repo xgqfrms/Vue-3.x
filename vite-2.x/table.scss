@@ -1,0 +1,105 @@
+@charset "UTf-8";
+
+/* .css */
+
+:root {
+    --cololr: #fff;
+    --default-cololr: #000;
+    --new-cololr: #0f0;
+}
+
+html{
+    font-size: 62.5%;
+    /* 10px = 1rem */
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, object, code, legend, button, input, textarea, th, td, a, img, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+.gui-table-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #fff;
+        font-size: 14px;
+        margin-bottom: 45px;
+        line-height: 1.5em;
+        th {
+            text-align: left;
+            white-space: nowrap;
+            color: #909399;
+            font-weight: 400;
+        }
+        td:first-child, th:first-child {
+            padding-left: 10px;
+        }
+        td,
+        th {
+            border-bottom: 1px solid #dcdfe6;
+            padding: 15px;
+            max-width: 250px;
+        }
+    }
+}
+
+
+
+
+
+.gui-table-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    .gui-table {
+        .gui-thead {
+            border-bottom: 1px solid #ccc;
+            .gui-thead-tr {
+                border-bottom: 1px solid #ccc;
+                .gui-thead-th {
+                    text-align: left;
+                    color: #000;
+                }
+            }
+        }
+        .gui-tbody {
+            .gui-tbody-tr {
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                .gui-tbody-td {
+                    text-align: left;
+                    color: #000;
+                }
+            }
+        }
+        .gui-tfoot {
+            .gui-tfoot-tr {
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                .gui-tfoot-td {
+                    text-align: left;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
