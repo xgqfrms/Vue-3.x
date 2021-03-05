@@ -1,17 +1,19 @@
 <template>
   <div class="parent">
-    <div>localName = {{localName}}</div>
+    <!-- <div>localName = {{localName}}</div>
     <div>funcLocalName = {{funcLocalName}}</div>
-    <div>mannulName = {{mannulName()}}</div>
+    <div>mannulName = {{mannulName()}}</div> -->
+    <Child :msg="name" />
     <button @click="updateName">change localStorage name</button>
   </div>
 </template>
 
 <script>
+import Child from './Child.vue'
 
-const getLocalName = () => {
-  return window.localStorage.getItem('name');
-}
+// const getLocalName = () => {
+//   return window.localStorage.getItem('name');
+// }
 
 /* eslint-disable no-unused-vars */
 
@@ -21,6 +23,9 @@ const getLocalName = () => {
 
 export default {
   name: 'Parent',
+  components: {
+    Child,
+  },
   props: {
     msg: String,
   },
@@ -31,36 +36,45 @@ export default {
     };
   },
   computed: {
-    funcLocalName() {
-      console.log('getLocalName =', getLocalName());
-      return getLocalName();
-    },
-    localName() {
-      console.log('localName =', window.localStorage.getItem('name'));
-      return window.localStorage.getItem('name');
-    },
+    // funcLocalName() {
+    //   console.log('getLocalName =', getLocalName());
+    //   return getLocalName();
+    // },
+    // localName() {
+    //   console.log('localName =', window.localStorage.getItem('name'));
+    //   return window.localStorage.getItem('name');
+    // },
   },
+  // beforeCreate() {
+  //   window.localStorage.removeItem('name');
+  // },
   mounted() {
-    window.localStorage.setItem('name', 'eric');
+    // window.localStorage.setItem('name', 'eric');
     // setTimeout(() => {
     //   window.localStorage.setItem('name', 'xgqfrms');
     // }, 3000);
-    // window.localStorage.setItem('name', this.name);
+    window.localStorage.setItem('name', this.name);
     // setTimeout(() => {
     //   this.name = 'xgqfrms';
     //   window.localStorage.setItem('name', this.name);
     // }, 3000);
   },
+  unmounted() {
+    window.localStorage.removeItem('name');
+  },
+  // destroyed() {
+  //   window.localStorage.removeItem('name');
+  // },
   methods: {
     updateName() {
       window.localStorage.setItem('name', 'xgqfrms' + Date.now());
-      // this.name = 'xgqfrms' + Date.now();
-      // window.localStorage.setItem('name', this.name);
+      this.name = 'xgqfrms' + Date.now();
+      window.localStorage.setItem('name', this.name);
     },
-    mannulName() {
-      console.log('mannulName =', window.localStorage.getItem('name'));
-      return window.localStorage.getItem('name');
-    },
+    // mannulName() {
+    //   console.log('mannulName =', window.localStorage.getItem('name'));
+    //   return window.localStorage.getItem('name');
+    // },
   },
 }
 </script>
