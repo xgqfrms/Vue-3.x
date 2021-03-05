@@ -1,10 +1,12 @@
 <template>
   <div class="child">
     <h1>{{msg}}</h1>
-    <div>localName = {{localName}}</div>
-    <div>funcLocalName = {{funcLocalName}}</div>
-    <div>mannulName = {{mannulName()}}</div>
-    <!-- <button @click="updateName">change localStorage name</button> -->
+    <div>❌ localName = {{localName}}</div>
+    <div>❌ funcLocalName = {{funcLocalName}}</div>
+    <div>✅ mannulName = {{mannulName()}}</div>
+    <div v-if="domReady">❌ window.localStorage.getItem('name') = {{window?.localStorage?.getItem('name')}}</div>
+    <!-- Child.vue?b541:6 Uncaught (in promise) TypeError: Cannot read property 'localStorage' of undefined -->
+    <!-- <div>❌ window.localStorage.getItem('name') = {{window?.localStorage?.getItem('name')}}</div> -->
   </div>
 </template>
 
@@ -20,12 +22,12 @@ export default {
     msg: {
       type: String,
       default: '',
-      // required: true,
+      required: true,
     },
   },
   data() {
     return {
-      //
+      domReady: false,
     };
   },
   computed: {
@@ -39,14 +41,12 @@ export default {
     },
   },
   mounted() {
-    //
+    this.domReady = true;
+  },
+  unmounted() {
+    this.domReady = false;
   },
   methods: {
-    // updateName() {
-    //   window.localStorage.setItem('name', 'xgqfrms' + Date.now());
-    //   this.name = 'xgqfrms' + Date.now();
-    //   window.localStorage.setItem('name', this.name);
-    // },
     mannulName() {
       console.log('mannulName =', window.localStorage.getItem('name'));
       return window.localStorage.getItem('name');
