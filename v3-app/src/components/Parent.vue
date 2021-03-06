@@ -10,7 +10,9 @@
 </template>
 
 <script>
-import Child from './Child.vue'
+// import Child from './Child.vue'
+// import * as ChildAlias from './Child.vue'
+import { default as ChildAlias} from './Child.vue'
 
 // const getLocalName = () => {
 //   return window.localStorage.getItem('name');
