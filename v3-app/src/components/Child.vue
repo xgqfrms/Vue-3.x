@@ -1,10 +1,11 @@
 <template>
   <div class="child">
     <h1>{{msg}}</h1>
+    <div>❌ name = {{name}}</div>
     <div>❌ localName = {{localName}}</div>
     <div>❌ funcLocalName = {{funcLocalName}}</div>
     <div>✅ mannulName = {{mannulName()}}</div>
-    <div v-if="domReady">❌ window.localStorage.getItem('name') = {{window?.localStorage?.getItem('name')}}</div>
+    <!-- <div v-if="domReady">❌ window.localStorage.getItem('name') = {{window?.localStorage?.getItem('name')}}</div> -->
     <!-- Child.vue?b541:6 Uncaught (in promise) TypeError: Cannot read property 'localStorage' of undefined -->
     <!-- <div>❌ window.localStorage.getItem('name') = {{window?.localStorage?.getItem('name')}}</div> -->
   </div>
@@ -28,6 +29,7 @@ export default {
   data() {
     return {
       domReady: false,
+      name: window.localStorage.getItem('name'),
     };
   },
   computed: {
