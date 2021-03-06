@@ -1,18 +1,31 @@
 <template>
   <div class="parent">
-    <!-- <div>localName = {{localName}}</div>
-    <div>funcLocalName = {{funcLocalName}}</div>
-    <div>mannulName = {{mannulName()}}</div> -->
+    <!-- <ChildAliasTest :msg="name" /> -->
     <ChildAlias :msg="name" />
-    <!-- <Child :msg="name" /> -->
+    <Child :msg="name" />
     <button @click="updateName">change localStorage name</button>
   </div>
 </template>
 
 <script>
-// import Child from './Child.vue'
-// import * as ChildAlias from './Child.vue'
+// ✅ export default
+import Child from './Child.vue'
+
+// ✅ export default
 import { default as ChildAlias} from './Child.vue'
+
+// ❌ export default
+// import * as ChildAlias from './Child.vue'
+
+// ❌ export
+// import * as ChildTest from './ChildTest.vue'
+// const {
+//   render: ChildAliasTest,
+// } = ChildTest;
+
+// ❌ export
+// import ChildTest as ChildAliasTest from './ChildTest.vue'
+// import { ChildTest as ChildAliasTest} from './ChildTest.vue'
 
 // const getLocalName = () => {
 //   return window.localStorage.getItem('name');
@@ -27,9 +40,10 @@ import { default as ChildAlias} from './Child.vue'
 export default {
   name: 'Parent',
   components: {
-    // Child,
-    ChildAlias,
+    Child,
     // ChildAlias.default,
+    ChildAlias,
+    // ChildAliasTest,
   },
   props: {
     msg: String,
@@ -40,29 +54,12 @@ export default {
       name: 'eric',
     };
   },
-  computed: {
-    // funcLocalName() {
-    //   console.log('getLocalName =', getLocalName());
-    //   return getLocalName();
-    // },
-    // localName() {
-    //   console.log('localName =', window.localStorage.getItem('name'));
-    //   return window.localStorage.getItem('name');
-    // },
-  },
+  computed: {},
   // beforeCreate() {
   //   window.localStorage.removeItem('name');
   // },
   mounted() {
-    // window.localStorage.setItem('name', 'eric');
-    // setTimeout(() => {
-    //   window.localStorage.setItem('name', 'xgqfrms');
-    // }, 3000);
     window.localStorage.setItem('name', this.name);
-    // setTimeout(() => {
-    //   this.name = 'xgqfrms';
-    //   window.localStorage.setItem('name', this.name);
-    // }, 3000);
   },
   unmounted() {
     window.localStorage.removeItem('name');
@@ -76,10 +73,6 @@ export default {
       this.name = 'xgqfrms' + Date.now();
       window.localStorage.setItem('name', this.name);
     },
-    // mannulName() {
-    //   console.log('mannulName =', window.localStorage.getItem('name'));
-    //   return window.localStorage.getItem('name');
-    // },
   },
 }
 </script>
