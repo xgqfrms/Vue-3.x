@@ -3,7 +3,8 @@
     <!-- <div>localName = {{localName}}</div>
     <div>funcLocalName = {{funcLocalName}}</div>
     <div>mannulName = {{mannulName()}}</div> -->
-    <Child :msg="name" />
+    <ChildAlias :msg="name" />
+    <!-- <Child :msg="name" /> -->
     <button @click="updateName">change localStorage name</button>
   </div>
 </template>
@@ -24,7 +25,9 @@ import Child from './Child.vue'
 export default {
   name: 'Parent',
   components: {
-    Child,
+    // Child,
+    ChildAlias,
+    // ChildAlias.default,
   },
   props: {
     msg: String,
