@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import { h, toRef, ref, reactive, } from 'vue'
+  import { h, toRefs, toRef, ref, reactive, } from 'vue'
   // import { ref, reactive } from 'vue'
   // import { toRef } from 'vue'
 
