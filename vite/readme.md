@@ -30,6 +30,7 @@ $ pnpm create vite vue3-ts-pinia -- --template vue-ts
 https://vitejs.dev/guide/#scaffolding-your-first-vite-project
 
 
+
 ```sh
 $ cd vue3-ts-pinia
 
@@ -57,9 +58,23 @@ https://pinia.vuejs.org/core-concepts/actions.html
 
 https://vitejs.dev/guide/features.html#css-pre-processors
 
+https://cn.vitejs.dev/guide/features.html#css-pre-processors
+
 ```sh
 # .scss and .sass
 $ npm add -D sass
 ```
 
 
+## path alias @
+
+```ts
+import { appStore } from '@/stores/app';
+
+import { appStore } from '../stores/app';
+
+```
+
+https://pinia.vuejs.org/introduction.html#basic-example
+
+https://deploy-preview-1193--pinia-official.netlify.app/zh/introduction.html
