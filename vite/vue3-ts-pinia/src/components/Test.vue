@@ -5,6 +5,7 @@
     <div>{{store.msg}}</div>
   </template>
   <template v-if="true">
+    <div>{{store.getMsg}}</div>
     <pre>{{jsonString}}</pre>
     <pre>❓ {{store.msg}}</pre>
     <span v-pre>{{ this will not be compiled }}❓ {{store.msg}}</span>
@@ -13,12 +14,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-// import { appStore } from "@/store/index";
 import { appStore } from "../store/index";
+// import { appStore } from "@/store/index";
 // 实例化 store
 const store = appStore();
 const log = console.log;
-// log(`store =`, store);
+log(`store =`, store);
 
 let jsonString = ref('');
 const url = `https://cdn.xgqfrms.xyz/json/cat.json`;
