@@ -15,10 +15,13 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { appStore } from "../store/index";
 // import { appStore } from "@/store/index";
+// import { appStore } from "../store/index";
+// import { useAppStore } from "../store/index";
+import { useAppStore } from "@/store/index";
 // 实例化 store
-const store = appStore();
+// const store = appStore();
+const store = useAppStore();
 const log = console.log;
 log(`store =`, store);
 
