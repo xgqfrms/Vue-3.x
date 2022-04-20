@@ -46,6 +46,12 @@ $ npm run dev
 
 state, getters and actions 类似等价于 data, computed and methods
 
+```sh
+$ npm i -S pinia
+
+```
+
+
 https://pinia.vuejs.org/getting-started.html#what-is-a-store
 
 https://pinia.vuejs.org/core-concepts/state.html

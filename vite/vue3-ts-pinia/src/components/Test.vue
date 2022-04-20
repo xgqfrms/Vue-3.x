@@ -6,7 +6,7 @@
   </template>
   <template v-if="true">
     <div>{{store.getMsg}}</div>
-    <pre>{{jsonString}}</pre>
+    <!-- <pre>{{jsonString}}</pre> -->
     <pre>❓ {{store.msg}}</pre>
     <span v-pre>{{ this will not be compiled }}❓ {{store.msg}}</span>
     <button @click="updateMsg">Pinia 🍍</button>
