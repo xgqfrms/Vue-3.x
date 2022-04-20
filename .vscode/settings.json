@@ -84,5 +84,11 @@
   "html.format.extraLiners": "",
   "html.format.enable": false,
   "html.format.contentUnformatted": "body, div, section, script, pre,code,textarea",
-  "vetur.validation.template": false
+  "vetur.validation.template": false,
+  "vetur.completion.scaffoldSnippetSources": {
+    "workspace": "💼",
+    "user": "🗒️",
+    "vetur": "✌"
+  },
+  "vetur.validation.script": false
 }
