@@ -9,6 +9,7 @@
     <pre>{{jsonString}}</pre>
     <pre>❓ {{store.msg}}</pre>
     <span v-pre>{{ this will not be compiled }}❓ {{store.msg}}</span>
+    <button @click="updateMsg">Pinia 🍍</button>
   </template>
 </template>
 
@@ -36,6 +37,12 @@ store.fetchData(url).then(json => {
 //   console.log('fetchData =', json);
 // });
 
+const updateMsg = () => {
+  store.$patch({
+    msg: "Hello Pinia 🍍!",
+  });
+  // store.updateMsg('Pinia 🍍');
+}
 </script>
 
 <style scoped lang="scss">
