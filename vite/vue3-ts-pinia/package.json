@@ -2,9 +2,10 @@
   "name": "vue3-ts-pinia",
   "private": true,
   "version": "0.0.0",
+  "proxy": "http://localhost:8888/",
   "scripts": {
-    "dev": "vite",
-    "start": "vite",
+    "test": "vite",
+    "start": "open http://localhost:3000/ && npm test",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
