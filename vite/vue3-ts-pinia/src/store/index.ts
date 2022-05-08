@@ -25,6 +25,7 @@ export const useAppStore = defineStore('appStore', {
       const json = await fetch(url).then(res => res.json());
       // console.log('json =', json);
       return json;
+      // return {key: 'value'};
     },
   },
 });
