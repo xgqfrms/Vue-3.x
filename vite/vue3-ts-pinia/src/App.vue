@@ -1,9 +1,11 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <Test />
+  <!-- <Test /> -->
+  <Diff />
 </template>
 
 <script setup lang="ts">
+import Diff from './components/Diff.vue';
 import Test from './components/Test.vue';
 // 'Test' is declared but its value is never read.Vetur(6133)
 
