@@ -10,8 +10,11 @@
 // import * as filter from "./node_modules/lodash-es/filter.js";
 // app.js:35 Uncaught TypeError: filter is not a function ❌
 
-// export default filter;
-import filter from "./node_modules/lodash-es/filter.js";
+// export default filter; ✅
+// import filter from "./node_modules/lodash-es/filter.js";
+
+// export default filter; ✅
+import { filter  } from "./node_modules/lodash-es/lodash.js";
 
 
 if(console.clear) {
