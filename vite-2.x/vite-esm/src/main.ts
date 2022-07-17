@@ -7,6 +7,8 @@ app.innerHTML = `
   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 `
 
+// vite typescript 运行原理
+// vite 会自动替换掉 HTTP 请求的文件 main.ts 中的 types, 并将 ts 文件转换成 js 文件， 但是不改变文件扩展名 main.ts ！
 interface Human {
   name: string;
 }
