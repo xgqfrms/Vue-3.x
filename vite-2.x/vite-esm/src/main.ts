@@ -35,6 +35,10 @@ import { filter  } from "lodash-es";
 // filter 子模块， 会在请求的时候自动的替换成 .vite/deps 下的单个 module
 // import {filter} from "/node_modules/.vite/deps/lodash-es.js?v=dc06565e";
 
+
+// Could not find a declaration file for module 'lodash-es'. '/Users/xgqfrms-mbp/Documents/GitHub/Vue-3.x/vite-2.x/vite-esm/node_modules/lodash-es/lodash.js' implicitly has an 'any' type.
+//   Try `npm i --save-dev @types/lodash-es` if it exists or add a new declaration (.d.ts) file containing `declare module 'lodash-es';`ts(7016)
+
 if(console.clear) {
   console.clear();
 }

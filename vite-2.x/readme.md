@@ -15,3 +15,10 @@ $ yarn
 $ yarn dev
 
 ```
+
+```sh
+$ yarn add lodash-es
+
+$ yarn add -D @types/lodash-es
+
+```
